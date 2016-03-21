@@ -1,0 +1,16 @@
+Package: Candidate
+Title: Tracks the delegates a candidate has and needs to secure a nomination.
+Version: 0.0.1
+Authors@R: person("Alex", "Weil", email = "alexweil@wustl.edu", role = c("aut", "cre"))
+Description: Provides an interface for c
+Depends:
+    R (>= 3.2.3)
+License: BSD 3-Clause
+LazyData: true
+RoxygenNote: 5.0.1
+Collate:
+	'Candidate.R'
+	'initialize_Candidate.R'
+	'print_Candidate.R'
+	'propNeeded_Candidate.R'
+	'show_Candidate.R'
