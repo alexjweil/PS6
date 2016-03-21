@@ -23,10 +23,10 @@ Candidate = setClass("Candidate",
 #'
 #' @return The number of delegates necessary for a member of
 #' 	the specified party to secure a nomination.
-delegates.needed = function(party) {
+delegates.needed = function(party, count) {
 	switch (party,
-			"Democratic" = return(2383),
-			"Republican" = return (1237),
+			"Democratic" = return(2383 - count),
+			"Republican" = return(1237 - count),
 			stop("Invalid Party Specified.")
 	)
 }

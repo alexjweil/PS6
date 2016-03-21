@@ -15,7 +15,7 @@ setMethod("initialize", signature(.Object = "Candidate"),
 		  	.Object@name = name
 		  	.Object@party = party
 		  	.Object@delegatesWon = delegatesWon
-		  	.Object@delegatesNeeded = delegates.needed(party)
+		  	.Object@delegatesNeeded = delegates.needed(party, delegatesWon)
 		  	return(.Object)
 		  }
 )

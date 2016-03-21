@@ -16,7 +16,12 @@ setGeneric("propNeeded", function(object) {
 setMethod("propNeeded",
 		  signature(object = "Candidate"),
 		  function (object) {
-		  	return(1 - object@delegatesWon / object@delegatesNeeded)
+		  	democratic.delegates = 4765
+		  	republican.delegates = 2472
+		  	switch (object@party,
+		  			"Democratic" = return(object@delegatesNeeded / democratic.delegates),
+		  			"Republican" = return(object@delegatesNeeded / republican.delegates)
+		  	)
 		  }
 )
 
